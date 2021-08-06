@@ -1,7 +1,7 @@
 
 
 # 1st ec2 instance
-resource "aws_instance" "web1" {
+resource "aws_instance" "app1" {
   ami           = "ami-09558250a3419e7d0"
   instance_type = "t2.micro"
  security_groups = ["${aws_security_group.web-nodes.name}"] #exposing ports
@@ -13,7 +13,7 @@ resource "aws_instance" "web1" {
 }
 
 #2nd ec2 instance 
-resource "aws_instance" "web2" {
+resource "aws_instance" "app2" {
   ami           = "ami-09558250a3419e7d0"
   instance_type = "t2.micro"
  security_groups = ["${aws_security_group.web-nodes.name}"] #exposing ports
